@@ -1,13 +1,13 @@
-Feature: Registry of the users
+Feature:Check for a flight
 
   Narrative:
-  In order to record reservations
-  As the host of the restaurant
-  I want to be able to storage the customers reservations
+  In order to check flights
+  As the host of iberia web
+  I want to be able to check if a flight exists
 
-  Scenario: Register customers reservations
-    Given I'm in the reservations page
-    When I register the following reservations:
-      | name   | phone | email            | date       | number | time  | color   |
-      | Aslak  | 11    | e@aslakhelle.oy  | 2017-02-17 | 1      | 12:00 | #4e2727 |
-    Then I get the reservation in the reservations list
+  Scenario: Check flight existence
+    Given I'm in the search page
+    When I check the following flight:
+      |Type | Origin  |  Destiny  |    Date    | ReturnDate   |  Adults  |   Children   |  Babies  |   TypeOfFlight   |
+      |VUELO| Madrid  | Barcelona | 01/06/2025 | 10/06/2024   |    1     |      0       |     0    |     Solo ida     |
+    Then I verify that the flight exists

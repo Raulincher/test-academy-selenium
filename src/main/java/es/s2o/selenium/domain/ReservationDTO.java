@@ -1,5 +1,7 @@
 package es.s2o.selenium.domain;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 
 /**
  * Created by sacrists on 26.02.17.
@@ -12,10 +14,80 @@ public class ReservationDTO {
     private String date;
     private String number;
     private String time;
+    private String origin;
+    private String destiny;
+    private String returnDate;
+    private String passengers;
+    private int babies;
+    private int adults;
+    private int children;
     private String color;
+    private String type;
+    private String typeOfFlight;
 
     public ReservationDTO() {
 
+    }
+
+    public String getDestiny() {
+        return destiny;
+    }
+
+    public void setDestiny(String destiny) {
+        this.destiny = destiny;
+    }
+
+    public String getTypeOfFlight() {
+        return typeOfFlight;
+    }
+
+    public void setTypeOfFlight(String typeOfFlight) {
+        this.typeOfFlight = typeOfFlight;
+    }
+
+    public String getReturnDate() {
+        return returnDate;
+    }
+
+    public void setReturnDate(String returnDate) {
+        this.returnDate = returnDate;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+    public void setPassengers(String passengers) {
+        this.passengers = passengers;
+    }
+
+    public String getPassengers() {return passengers;}
+
+    public int getBabies() {
+        return babies;
+    }
+
+    public void setBabies(int babies) {
+        this.babies = babies;
+    }
+
+    public int getAdults() {
+        return adults;
+    }
+
+    public void setAdults(int adults) {
+        this.adults = adults;
+    }
+
+    public int getChildren() {
+        return children;
+    }
+
+    public void setChildren(int children) {
+        this.children = children;
     }
 
     public String getName() {
@@ -24,6 +96,14 @@ public class ReservationDTO {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getOrigin() {
+        return origin;
+    }
+
+    public void setOrigin(String origin) {
+        this.origin = origin;
     }
 
     public String getPhone() {
