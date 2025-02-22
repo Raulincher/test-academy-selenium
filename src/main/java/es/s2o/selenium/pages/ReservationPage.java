@@ -1,6 +1,6 @@
 package es.s2o.selenium.pages;
 
-import es.s2o.selenium.domain.ReservationDTO;
+import es.s2o.selenium.domain.FlightSearchDTO;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 import org.slf4j.Logger;
@@ -32,7 +32,7 @@ public class ReservationPage extends PageObjectBase {
     private WebElementFacade display;
     private WebElementFacade display_txtName;
 
-    public void registerReservation(ReservationDTO reservation) {
+    public void registerReservation(FlightSearchDTO reservation) {
         LOGGER.debug("registerReservation starts, reservation: [{}]", reservation);
 
         typeInto(txtName, reservation.getName());

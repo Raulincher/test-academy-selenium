@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 /**
  * Created by sacrists on 26.02.17.
  */
-public class ReservationDTO {
+public class FlightSearchDTO {
 
     private String name;
     private String phone;
@@ -25,7 +25,7 @@ public class ReservationDTO {
     private String type;
     private String typeOfFlight;
 
-    public ReservationDTO() {
+    public FlightSearchDTO() {
 
     }
 
@@ -53,13 +53,6 @@ public class ReservationDTO {
         this.returnDate = returnDate;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
     public void setPassengers(String passengers) {
         this.passengers = passengers;
     }
